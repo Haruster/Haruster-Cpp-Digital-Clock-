@@ -171,5 +171,31 @@ int main() {
 	setcursor(0, 0);
 	srand((unsigned) time(NULL));
 
-	
+	time_t now = time(0);
+
+	char* dt = ctime(&now);
+
+	tm *lotm = localtime(&now);
+
+	dt = asctime(lotm);
+
+	int hour = lotm -> tm_hour;
+	int min = lotm -> tm_min;
+	int sec = lotm -> tm_sec;
+
+	int gap = 5;
+	int posX;
+	int posY = 8;
+
+	while(1) {
+
+		system("cls");
+		drawBorder(9, 4);
+
+		posX = 15;
+
+		
+
+	}
+
 }
