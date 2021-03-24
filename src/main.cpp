@@ -146,6 +146,6 @@ void drawBorder(int x =0, int y =0) {
 	int width = 50;
 	int height = 11;
 
-	
+	gotoxy((width/2) + x - 11, y); cout << "C U R R E N T  T I M E";
 
 }
