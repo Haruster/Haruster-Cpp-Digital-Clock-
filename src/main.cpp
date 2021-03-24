@@ -194,6 +194,53 @@ int main() {
 
 		posX = 15;
 
+		if(kbhit()) {
+
+			char ch = getch();
+			if(ch == 27) {
+				
+				break;
+			
+			}
+		}
+
+		if(hour < 10) {
+			printDigit(0, posX, posY);
+			printDigit(hour, posX += gap, posY);
+		}
+
+		else {
+			printDigit(hour / 10, posX, posY);
+			printDigit(hour % 10, posX += gap, posY);
+		}
+
+		printDigit(10, posX += gap, posY);
+
+		if(min < 10) {
+			printDigit(0, posX, posY);
+			printDigit(min, posX += gap, posY);
+		}
+
+		else {
+			printDigit(min / 10, posX, posY);
+			printDigit(min % 10, posX += gap, posY);
+		}
+
+		printDigit(10, posX += gap, posY);
+
+		
+		if(sec < 10) {
+			printDigit(0, posX, posY);
+			printDigit(sec, posX += gap, posY);
+		}
+
+		else {
+			printDigit(sec / 10, posX, posY);
+			printDigit(sec % 10, posX += gap, posY);
+		}
+
+		Sleep(950);
+		sec++
 		
 
 	}
