@@ -86,7 +86,7 @@ void setcursor(bool visible, DWORD size) {
 	if(size == 0)
 	size = 20;
 
-	_CONSOLE_CURSOR_INFO lpCursor;
+	CONSOLE_CURSOR_INFO lpCursor;
 	lpCursor.bVisible = visible;
 	lpCursor.dwSize = size;
 	SetConsoleCursorInfo(console, &lpCursor);
