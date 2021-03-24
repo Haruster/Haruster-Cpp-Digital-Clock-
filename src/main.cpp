@@ -92,4 +92,46 @@ void setcursor(bool visible, DWORD size) {
 	SetConsoleCursorInfo(console, &lpCursor);
 }
 
+void printDigit(int no, int x, int y) {
+
+	for(int i =0; i < 5; i++) {
+		
+		for(int j =0; j < 3; j++) {
+
+			switch(no) {
+
+				case 0:
+					gotoxy(x + j, y + i); cout<< d0[i][j]; break;
+
+				case 1:
+					gotoxy(x + j, y + i); cout<< d1[i][j]; break;
+
+				case 2:
+					gotoxy(x + j, y + i); cout<< d2[i][j]; break;
+
+				case 3:
+					gotoxy(x + j, y + i); cout<< d3[i][j]; break;
+
+				case 4:
+					gotoxy(x + j, y + i); cout<< d4[i][j]; break;
+
+				case 5:
+					gotoxy(x + j, y + i); cout<< d5[i][j]; break;
+
+				case 6:
+					gotoxy(x + j, y + i); cout<< d6[i][j]; break;
+
+				case 7:
+					gotoxy(x + j, y + i); cout<< d7[i][j]; break;
+
+				case 8:
+					gotoxy(x + j, y + i); cout<< d8[i][j]; break;
+
+				case 9:
+					gotoxy(x + j, y + i); cout<< d9[i][j]; break;
+
+			}
+		}
+	}
+}
 
