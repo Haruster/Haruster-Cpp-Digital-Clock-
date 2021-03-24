@@ -240,9 +240,33 @@ int main() {
 		}
 
 		Sleep(950);
-		sec++
+
+		sec++;
 		
+		if(sec >= 60) {
+			
+			sec = 0;
+			min++;
+
+		}
+
+		if(min >= 60) {
+
+			min = 0;
+			hour++;
+
+		}
+
+		if(hour >= 24) {
+
+			sec = 0;
+			min = 0;
+			hour = 0;
+
+		}
 
 	}
+
+	return 0;
 
 }
