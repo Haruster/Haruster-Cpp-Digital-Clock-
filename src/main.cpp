@@ -135,3 +135,17 @@ void printDigit(int no, int x, int y) {
 	}
 }
 
+void drawBorder(int x =0, int y =0) {
+
+	char v = 186;
+	char h = 205;
+	char tr = 187;
+	char br = 188;
+	char tl = 201;
+	char bl = 200;
+	int width = 50;
+	int height = 11;
+
+	
+
+}
