@@ -74,5 +74,22 @@ char sep[5][3] = { ' ', ' ', ' ',
 				   ' ', ' ', ' ' };
 
 HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
+COORD Cursorposition;
 
+void gotoxy(int x, int y) {
+	Cursorposition.X = x;
+	Cursorposition.Y = y;
+	SetConsoleCursorPosition(console, Cursorposition);
 }
+
+void setcursor(bool visible, DWORD size) {
+	if(size == 0)
+	size = 20;
+
+	_CONSOLE_CURSOR_INFO lpCursor;
+	lpCursor.bVisible = visible;
+	lpCursor.dwSize = size;
+	SetConsoleCursorInfo(console, &lpCursor);
+}
+
+
