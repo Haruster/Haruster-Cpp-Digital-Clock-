@@ -148,4 +148,20 @@ void drawBorder(int x =0, int y =0) {
 
 	gotoxy((width/2) + x - 11, y); cout << "C U R R E N T  T I M E";
 
+	for(int i = 1; i <= height; i++) {
+
+		for(int j = 1; j <= width; j++) {
+
+			gotoxy(j + x, i + y);
+
+			if(i == 1 && j == 1) cout << tl;
+			else if(i == height && j == 1) cout << bl;
+			else if(i == 1 && j == width) cout << tr;
+			else if(i == height && j == width) cout << br;
+			else if(i == 1 || i == height) cout << h;
+			else if(j == 1 || j == width) cout << v; 
+
+		}
+
+	}
 }
