@@ -135,7 +135,7 @@ void printDigit(int no, int x, int y) {
 	}
 }
 
-void drawBorder(int x =0, int y =0) {
+void drawBorder(int x = 0, int y = 0) {
 
 	char v = 186;
 	char h = 205;
@@ -164,4 +164,12 @@ void drawBorder(int x =0, int y =0) {
 		}
 
 	}
+}
+
+int main() {
+	system("cls");
+	setcursor(0, 0);
+	srand((unsigned) time(NULL));
+
+	
 }
